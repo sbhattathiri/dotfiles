@@ -6,10 +6,10 @@
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
-# font_family      monospace
-# bold_font        auto
-# italic_font      auto
-# bold_italic_font auto
+ font_family      JetBrainsMono Nerd Font Mono
+ bold_font        auto
+ italic_font      auto
+ bold_italic_font auto
 
 #: You can specify different fonts for the bold/italic/bold-italic
 #: variants. The easiest way to select fonts is to run the `kitten
@@ -20,7 +20,7 @@
 #: <https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/#font-spec-
 #: syntax>.
 
-# font_size 11.0
+ font_size 14.0
 
 #: Font size (in pts).
 
@@ -531,13 +531,13 @@
 #: no-op:
 #:     Has no effect.
 
-# strip_trailing_spaces never
+ strip_trailing_spaces smart
 
 #: Remove spaces at the end of lines when copying to clipboard. A
 #: value of smart will do it when using normal selections, but not
 #: rectangle selections. A value of always will always do it.
 
-# select_by_word_characters @-./_~?&=%+#
+ select_by_word_characters @-./_~?&=%+#
 
 #: Characters considered part of a word when double clicking. In
 #: addition to these characters any character that is marked as an
@@ -772,7 +772,7 @@
 
 #: Terminal bell {{{
 
-# enable_audio_bell yes
+ enable_audio_bell yes
 
 #: The audio bell. Useful to disable it in environments that require
 #: silence.
@@ -849,9 +849,9 @@
 
 #: Window layout {{{
 
-# remember_window_size  yes
-# initial_window_width  640
-# initial_window_height 400
+ remember_window_size  yes
+ initial_window_width  3400
+ initial_window_height 1850
 
 #: If enabled, the OS Window size will be remembered so that new
 #: instances of kitty will have the same size as the previous
@@ -1217,7 +1217,7 @@
 
 #: The foreground and background colors.
 
-# background_opacity 1.0
+ background_opacity 0.8
 
 #: The opacity of the background. A number between zero and one, where
 #: one is opaque and zero is fully transparent. This will only work if
@@ -1938,7 +1938,7 @@
 #: The full list of actions that can be mapped to key presses is
 #: available here <https://sw.kovidgoyal.net/kitty/actions/>.
 
-# kitty_mod ctrl+shift
+ kitty_mod ctrl+shift
 
 #: Special modifier key alias for default shortcuts. You can change
 #: the value of this option to alter all default shortcuts that use
@@ -1982,7 +1982,7 @@
 #: Copy to clipboard
 
 # map kitty_mod+c copy_to_clipboard
-# map cmd+c       copy_to_clipboard
+ map cmd+c       copy_to_clipboard
 
 #::  There is also a copy_or_interrupt action that can be optionally
 #::  mapped to Ctrl+C. It will copy only if there is a selection and
@@ -1993,7 +1993,7 @@
 #: Paste from clipboard
 
 # map kitty_mod+v paste_from_clipboard
-# map cmd+v       paste_from_clipboard
+ map cmd+v       paste_from_clipboard
 
 #: Paste from selection
 
@@ -2344,7 +2344,7 @@
 # map kitty_mod+equal  change_font_size all +2.0
 # map kitty_mod+plus   change_font_size all +2.0
 # map kitty_mod+kp_add change_font_size all +2.0
-# map cmd+plus         change_font_size all +2.0
+ map cmd+plus         change_font_size all +2.0
 # map cmd+equal        change_font_size all +2.0
 # map shift+cmd+equal  change_font_size all +2.0
 
@@ -2352,7 +2352,7 @@
 
 # map kitty_mod+minus       change_font_size all -2.0
 # map kitty_mod+kp_subtract change_font_size all -2.0
-# map cmd+minus             change_font_size all -2.0
+ map cmd+minus             change_font_size all -2.0
 # map shift+cmd+minus       change_font_size all -2.0
 
 #: Reset font size
@@ -2640,9 +2640,7 @@
 #: }}}
 
 
-# BEGIN_KITTY_FONTS
-font_family      family="JetBrainsMono Nerd Font Mono"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-# END_KITTY_FONTS
+# BEGIN_KITTY_THEME
+# Catppuccin-Macchiato
+include current-theme.conf
+# END_KITTY_THEME
